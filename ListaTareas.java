@@ -35,5 +35,14 @@ public class ListaTareas
     public void eliminarTarea(int posicion){
         
     }
-    
+    public void mostrarTareas(){
+        int x = 1;
+        for (Tarea tarea : listaDeTareas){
+            System.out.println(x + "-" + tarea.getNombre());
+            x++;
+        }
+    }
+    public void ponerHecha(int cual){
+        
+    }
 }

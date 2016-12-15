@@ -8,7 +8,7 @@
 public class Tarea
 {
     // instance variables - replace the example below with your own
-    private String nombre;
+    private String tarea;
     private boolean completada;
     
 
@@ -18,8 +18,13 @@ public class Tarea
     public Tarea(String nombre)
     {
         completada = false;
+        tarea = nombre;
     }
     public void completarTarea(){
         completada = true;
     }
+    public String getNombre(){
+        return tarea;
+    }
+    
 }
