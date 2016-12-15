@@ -2,7 +2,12 @@
 comment0.params=
 comment0.target=ListaTareas()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ListaTareas\r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=2
+comment1.params=
+comment1.target=void\ verTareas()
+comment2.params=nombre
+comment2.target=void\ addTarea(java.lang.String)
+comment3.params=
+comment3.target=int\ verNumeroTareas()
+comment4.params=posicion
+comment4.target=void\ eliminarTarea(int)
+numComments=5

@@ -8,15 +8,18 @@
 public class Tarea
 {
     // instance variables - replace the example below with your own
-    private String descripcion;
+    private String nombre;
+    private boolean completada;
     
 
     /**
      * Constructor for objects of class Tarea
      */
-    public Tarea(String descripcion)
+    public Tarea(String nombre)
     {
-        this.descripcion = descripcion;
+        completada = false;
     }
-    
+    public void completarTarea(){
+        completada = true;
+    }
 }
