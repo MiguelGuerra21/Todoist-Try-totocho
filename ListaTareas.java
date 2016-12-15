@@ -43,6 +43,7 @@ public class ListaTareas
         }
     }
     public void ponerHecha(int cual){
-        
+        int index = cual;
+        listaDeTareas.get(index - 1).completarTarea();
     }
 }
