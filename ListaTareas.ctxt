@@ -14,4 +14,6 @@ comment5.params=
 comment5.target=void\ mostrarTareas()
 comment6.params=cual
 comment6.target=void\ ponerHecha(int)
-numComments=7
+comment7.params=texto
+comment7.target=void\ mostrarTareasCoincidentes(java.lang.String)
+numComments=8

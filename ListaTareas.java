@@ -33,7 +33,8 @@ public class ListaTareas
     }
     
     public void eliminarTarea(int posicion){
-        
+        int index = posicion + 1;
+        listaDeTareas.get(posicion).remove(index);
     }
     public void mostrarTareas(){
         int x = 1;
@@ -45,5 +46,20 @@ public class ListaTareas
     public void ponerHecha(int cual){
         int index = cual;
         listaDeTareas.get(index - 1).completarTarea();
+    } 
+    public void mostrarTareasCoincidentes(String texto){
+        int x = 0;
+        int coincidencias = 0;
+        for (Tarea tarea : listaDeTareas){
+            x = x + 1;
+            if(tarea.getNombre().contains(texto)){
+                System.out.println(x + "-" + tarea.getNombre());
+                coincidencias = coincidencias + 1;
+            }
+        }
+        if(coincidencias == 0){
+            System.out.println("Error");
+        }
     }
+    
 }
