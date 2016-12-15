@@ -33,19 +33,21 @@ public class ListaTareas
     }
     
     public void eliminarTarea(int posicion){
-        int index = posicion + 1;
-        listaDeTareas.get(posicion).remove(index);
+        int index = posicion - 1;
+        listaDeTareas.remove(index);
     }
     public void mostrarTareas(){
         int x = 1;
         for (Tarea tarea : listaDeTareas){
-            System.out.println(x + "-" + tarea.getNombre());
+            System.out.println(x + "-" + tarea.getNombre() + " - " + tarea.verEstadoTarea());
             x++;
         }
     }
     public void ponerHecha(int cual){
-        int index = cual;
-        listaDeTareas.get(index - 1).completarTarea();
+        int index = cual + 1;
+        if(index <= listaDeTareas.size() && index > 0){
+            listaDeTareas.get(index - 1).completarTarea();
+        }
     } 
     public void mostrarTareasCoincidentes(String texto){
         int x = 0;
@@ -53,7 +55,7 @@ public class ListaTareas
         for (Tarea tarea : listaDeTareas){
             x = x + 1;
             if(tarea.getNombre().contains(texto)){
-                System.out.println(x + "-" + tarea.getNombre());
+                System.out.println(x + "-" + tarea.getNombre()+ " - " + tarea.verEstadoTarea());
                 coincidencias = coincidencias + 1;
             }
         }

@@ -6,4 +6,6 @@ comment1.params=
 comment1.target=void\ completarTarea()
 comment2.params=
 comment2.target=java.lang.String\ getNombre()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ verEstadoTarea()
+numComments=4

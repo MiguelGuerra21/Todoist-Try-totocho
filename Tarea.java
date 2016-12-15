@@ -26,5 +26,14 @@ public class Tarea
     public String getNombre(){
         return tarea;
     }
-    
+    public String verEstadoTarea(){
+        String manolo = completada + "";
+        if (completada == true){
+            manolo = "Hecha";
+        }
+        else{
+            manolo = "Pendiente";
+        }
+        return manolo;
+    }
 }
