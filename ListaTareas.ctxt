@@ -16,4 +16,6 @@ comment6.params=cual
 comment6.target=void\ ponerHecha(int)
 comment7.params=texto
 comment7.target=void\ mostrarTareasCoincidentes(java.lang.String)
-numComments=8
+comment8.params=cual\ nuevaPrioridad
+comment8.target=void\ establecerPrioridadTarea(int,\ int)
+numComments=9

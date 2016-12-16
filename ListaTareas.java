@@ -34,7 +34,9 @@ public class ListaTareas
     
     public void eliminarTarea(int posicion){
         int index = posicion - 1;
-        listaDeTareas.remove(index);
+        if(posicion >= 0 && posicion < listaDeTareas.size()){
+            listaDeTareas.remove(index);
+        }
     }
     public void mostrarTareas(){
         int x = 1;
@@ -44,24 +46,26 @@ public class ListaTareas
         }
     }
     public void ponerHecha(int cual){
-        int index = cual + 1;
+        int index = cual - 1;
         if(index <= listaDeTareas.size() && index > 0){
-            listaDeTareas.get(index - 1).completarTarea();
+            listaDeTareas.get(index).completarTarea();
         }
     } 
     public void mostrarTareasCoincidentes(String texto){
-        int x = 0;
-        int coincidencias = 0;
-        for (Tarea tarea : listaDeTareas){
-            x = x + 1;
-            if(tarea.getNombre().contains(texto)){
-                System.out.println(x + "-" + tarea.getNombre()+ " - " + tarea.verEstadoTarea());
-                coincidencias = coincidencias + 1;
+        int posicion = 0;
+        while (posicion < listaDeTareas.size()){
+            Tarea tareaActual = listaDeTareas.get(posicion);
+            if (tareaActual.getNombre().contains(texto)){
+                System.out.println((posicion + 1) + ". " + tareaActual.toString() + " > " + tareaActual.verEstadoTarea());
             }
-        }
-        if(coincidencias == 0){
-            System.out.println("Error");
+            posicion++;
         }
     }
-    
+    public void establecerPrioridadTarea(int cual,int nuevaPrioridad){
+        if(cual >0 && cual <=listaDeTareas.size()){
+            if(nuevaPrioridad > 0 && nuevaPrioridad <5){
+                  listaDeTareas.get(cual).establecerPrioridad(nuevaPrioridad);
+                }
+            }
+    }
 }
