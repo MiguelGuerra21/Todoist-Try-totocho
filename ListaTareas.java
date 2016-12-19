@@ -10,7 +10,6 @@ public class ListaTareas
 {
                                  //Atributos
     private ArrayList<Tarea> listaDeTareas;
-
     /**
      * Constructor for objects of class ListaTareas
      */
@@ -41,7 +40,7 @@ public class ListaTareas
     public void mostrarTareas(){
         int x = 1;
         for (Tarea tarea : listaDeTareas){
-            System.out.println(x + "-" + tarea.getNombre() + " - " + tarea.verEstadoTarea() + " - Prioridad" + tarea.getPrioridad());
+            System.out.println(x + "-" + tarea.getNombre() + " - " + tarea.verEstadoTarea() + " - Prioridad" + tarea.getPrioridad() + "-Fecha:" + tarea.getFecha());
             x++;
         }
     }
@@ -63,10 +62,18 @@ public class ListaTareas
     }
     public void establecerPrioridadTarea(int cual,int nuevaPrioridad){
         int cual2 = cual - 1;
-        if(cual2 >= 0 && cual2 <=listaDeTareas.size()){
+        if(cual2 >= 0 && cual2 < listaDeTareas.size()){
             if(nuevaPrioridad > 0 && nuevaPrioridad <5){
                   listaDeTareas.get(cual2).establecerPrioridad(nuevaPrioridad);
                 }
             }
+    }
+    public void establecerFecha(int cual, int nuevoDia, int nuevoMes, int nuevoAño){
+        if(cual >= 0 && cual < listaDeTareas.size()){
+            listaDeTareas.get(cual - 1).establecerFechaVencimiento(nuevoDia , nuevoMes , nuevoAño);
+        }
+        else{
+            System.out.println("Error de dato");
+        }
     }
 }

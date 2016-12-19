@@ -1,4 +1,4 @@
-
+import java.time.LocalDate;
 /**
  * Write a description of class Tarea here.
  * 
@@ -11,6 +11,7 @@ public class Tarea
     private String tarea;
     private boolean completada;
     private int prioridad;
+    private LocalDate fecha;
 
     /**
      * Constructor for objects of class Tarea
@@ -20,6 +21,7 @@ public class Tarea
         completada = false;
         tarea = nombre;
         prioridad = 0;
+        fecha = null;
     }
     public void completarTarea(){
         completada = true;
@@ -41,12 +43,12 @@ public class Tarea
         return manolo;
     }
     public String toString(){
-        String amiamiamiamiamiam = "";
+        String cadena = "";
         if(completada){
-            amiamiamiamiamiam += "Completada";
+            cadena += "Completada";
         }
-        amiamiamiamiamiam += tarea;
-        return amiamiamiamiamiam;
+        cadena += tarea;
+        return cadena;
     }
     /**
      * Ahora las tareas pueden tener prioridad: 0 prioridad baja, 5 prioridad alta.
@@ -58,4 +60,18 @@ public class Tarea
             this.prioridad = prioridad;
         }
     }
+    public void establecerFechaVencimiento(int dia ,int mes , int año){
+        fecha = LocalDate.of(año, mes ,dia);
+    }
+    public String getFecha(){
+        String fecha2;
+        if(fecha == null){
+            fecha2 = " fecha no especificada";
+        }
+        else{
+            fecha2 = fecha.toString();
+        }
+        return fecha2;
+    }
+    
 }

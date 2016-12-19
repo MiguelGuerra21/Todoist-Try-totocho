@@ -18,4 +18,6 @@ comment7.params=texto
 comment7.target=void\ mostrarTareasCoincidentes(java.lang.String)
 comment8.params=cual\ nuevaPrioridad
 comment8.target=void\ establecerPrioridadTarea(int,\ int)
-numComments=9
+comment9.params=cual\ nuevoDia\ nuevoMes\ nuevoA\u00F1o
+comment9.target=void\ establecerFecha(int,\ int,\ int,\ int)
+numComments=10

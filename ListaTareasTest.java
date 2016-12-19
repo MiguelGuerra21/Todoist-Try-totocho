@@ -30,12 +30,10 @@ public class ListaTareasTest
     @Before
     public void setUp()
     {
-        
         listaTar1 = new ListaTareas();
         listaTar1.addTarea("hacer la cama");
+        listaTar1.addTarea("sacar al perro");
         listaTar1.addTarea("comprar pan");
-        listaTar1.addTarea("ser tutti");
-        listaTar1.mostrarTareas();
     }
 
     /**
