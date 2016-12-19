@@ -27,6 +27,9 @@ public class Tarea
     public String getNombre(){
         return tarea;
     }
+    public int getPrioridad(){
+        return prioridad;
+    }
     public String verEstadoTarea(){
         String manolo = completada + "";
         if (completada == true){

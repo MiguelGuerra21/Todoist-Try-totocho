@@ -41,7 +41,7 @@ public class ListaTareas
     public void mostrarTareas(){
         int x = 1;
         for (Tarea tarea : listaDeTareas){
-            System.out.println(x + "-" + tarea.getNombre() + " - " + tarea.verEstadoTarea());
+            System.out.println(x + "-" + tarea.getNombre() + " - " + tarea.verEstadoTarea() + " - Prioridad" + tarea.getPrioridad());
             x++;
         }
     }
@@ -62,9 +62,10 @@ public class ListaTareas
         }
     }
     public void establecerPrioridadTarea(int cual,int nuevaPrioridad){
-        if(cual >0 && cual <=listaDeTareas.size()){
+        int cual2 = cual - 1;
+        if(cual2 >= 0 && cual2 <=listaDeTareas.size()){
             if(nuevaPrioridad > 0 && nuevaPrioridad <5){
-                  listaDeTareas.get(cual).establecerPrioridad(nuevaPrioridad);
+                  listaDeTareas.get(cual2).establecerPrioridad(nuevaPrioridad);
                 }
             }
     }
